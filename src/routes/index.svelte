@@ -1,12 +1,12 @@
 <script lang="ts" context="module">
 	let initialCount: number;
 
-    export async function load(context) {
+	export async function load(context) {
 		const raw = await context.fetch("/api/counter");
 		const initial = await raw.json();
 
 		initialCount = parseInt(initial.count);
-    }
+	}
 </script>
 
 <script lang="ts">
